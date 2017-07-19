@@ -1,3 +1,9 @@
+//asks which cloud provider to deploy cluster 
+variable "cloud_provider" {
+    description = "Select cloud provider to deploy 1)AWS 2)Azure 3)Google Cloud Platform"
+    type = "string"
+}
+
 //AWS client key to provision to AWS
 variable "access_key" {
     type = "string"
@@ -19,6 +25,7 @@ Ensure this keypair is added to your local SSH agent so provisioners can
 connect.
 Example: ~/.ssh/terraform.pub
 DESCRIPTION
+  default   = "~/.ssh/id_rsa.pub"
 }
 
 
